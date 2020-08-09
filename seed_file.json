@@ -1,0 +1,145 @@
+{
+
+  "users":[
+    {
+      "user_id": "user_1",
+      "user_name": "mark.cuban"
+    },
+    {
+      "user_id": "user_2",
+      "user_name": "robert.h"
+    },
+    {
+      "user_id": "user_3",
+      "user_name": "mr.wonderful"
+    }
+  ],
+  "actions": [
+    {
+      "action_type": "CREATE"
+    },
+    {
+      "action_type": "DELETE"
+    },
+    {
+      "action_type": "WRITE"
+    },
+    {
+      "action_type": "READ"
+    },
+    {
+      "action_type": "UPDATE"
+    }
+  ],
+  "roles":[
+    {
+      "role_id": "role_1",
+      "role_name": "SUPERADMIN"
+    },
+    {
+      "role_id": "role_2",
+      "role_name": "USERADMIN"
+    },
+    {
+      "role_id": "role_3",
+      "role_name": "ROLEADMIN"
+    }
+  ],
+  "resources":[
+    {
+      "resource_id":"model1",
+      "resource_name": "model1"
+    },
+    {
+      "resource_id":"model2",
+      "resource_name": "model2"
+    },
+    {
+      "resource_id":"model3",
+      "resource_name": "model3"
+    }
+  ],
+  "role_resource_entitlements": [
+    {
+      "role_id":"role_2",
+      "action_type": "WRITE",
+      "resource_id": "model1"
+    },
+    {
+      "role_id":"role_2",
+      "action_type": "READ",
+      "resource_id": "model1"
+    },
+    {
+      "role_id":"role_2",
+      "action_type": "DELETE",
+      "resource_id": "model1"
+    },
+    {
+      "role_id":"role_2",
+      "action_type": "WRITE",
+      "resource_id": "model2"
+    },
+    {
+      "role_id":"role_2",
+      "action_type": "READ",
+      "resource_id": "model2"
+    },
+    {
+      "role_id":"role_3",
+      "action_type": "DELETE",
+      "resource_id": "model2"
+    },
+    {
+      "role_id":"role_3",
+      "action_type": "WRITE",
+      "resource_id": "model3"
+    },
+    {
+      "role_id":"role_3",
+      "action_type": "DELETE",
+      "resource_id": "model3"
+    },
+    {
+      "role_id":"role_1",
+      "action_type": "WRITE",
+      "resource_id": "*"
+    },
+    {
+      "role_id":"role_1",
+      "action_type": "READ",
+      "resource_id": "*"
+    },
+    {
+      "role_id":"role_1",
+      "action_type": "DELETE",
+      "resource_id": "*"
+    }
+  ],
+  "user_roles":[
+    {
+      "user_id":"user_1",
+      "role_id":"role_1"
+    },
+    {
+      "user_id":"user_1",
+      "role_id":"role_2"
+    },
+    {
+      "user_id":"user_1",
+      "role_id":"role_3"
+    },
+    {
+      "user_id":"user_2",
+      "role_id":"role_2"
+    },
+    {
+      "user_id":"user_3",
+      "role_id":"role_2"
+    },
+    {
+      "user_id":"user_3",
+      "role_id":"role_3"
+    }
+  ]
+}
