@@ -32,8 +32,9 @@ Using this command the program will be loaded with seed data. This seed data wil
 
 ## Assumptions
 1. The user is already authenticated once it enters the application.
-2. The user running the application is superuser, so he can see all the roles and entitlements.
-3. The actions provided for entities are create and delete for the sake of simplicity.
+2. The application is designed for frequent changes in roles, entitlements and users added in roles.
+3. The user running the application is superuser, so he can see all the roles and entitlements.
+4. The actions provided for entities are create and delete for the sake of simplicity.
 
 
 ## Functionality
@@ -53,10 +54,10 @@ Using this command the program will be loaded with seed data. This seed data wil
 2. In order to persist data, ORM can be added for database management where RDBMS will be used for storing data.
 2. Update API can be added for all entities.
 3. As the application grows, Resource Type can be used to group resources. I have added a class for this feature.
-4. ######PERFORMANCE ENHANCEMENT:
-   As application will grow, roles and entitlements will grow, and it will be overhead to find entitlement, by checking
-   all roles and entitlements.
-   To solve this overhead problem, I have designed following:
+4. ###### Another Approach:
+   The approach I have used is accurate for an growing application where roles and entitlements are created and changed 
+   regularly.\
+   If the application is stable where roles and entitlements are rarely changed, following approach can be used.
    1. User will have entitlements column.
    2. Entitlement column will have all the entitlements from roles and its role resource entitlements.
       e.g. entitlements 
